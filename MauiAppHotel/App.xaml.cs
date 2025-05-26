@@ -5,8 +5,11 @@
         public App()
         {
             InitializeComponent();
-        }
 
+            NavigationPage navigationPage = new(new Views.ContratacaoHospedagem());
+            MainPage = navigationPage;
+        }
+        
         protected override Window CreateWindow(IActivationState? activationState)
         {
 

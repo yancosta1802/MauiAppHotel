@@ -1,4 +1,6 @@
-﻿namespace MauiAppHotel
+﻿using MauiAppHotel.Views;
+
+namespace MauiAppHotel
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,10 @@
         public MainPage()
         {
             InitializeComponent();
+        }
+        private async void OnSobreClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Sobre());
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -19,6 +25,8 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+
         }
     }
 
